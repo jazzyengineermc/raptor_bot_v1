@@ -1,0 +1,36 @@
+sudo pigpiod // Not needed... yet ;)
+roslaunch mpu9250-driver mpu9250.launch
+
+
+//RPLidar node
+
+        rosrun rplidar_ros rplidarNode
+
+
+//Base and IMU, raptorbot launch does both
+
+        rosrun rosserial_python serial_node.py /dev/ttyACM0 // cmd_vel vechicle
+        rosrun rosserial_python serial_node.py /dev/ttyUSB1 // MPU6050 IMU, must be plugged in after lidar
+        roslaunch raptor_bot_v1 raptorbot.launch
+
+
+// start hector slam, map making mode
+
+        roslaunch hector_slam_launch tutorial.launch
+
+
+// drive the robot manually, run from console with wireless keyboard
+// or via ssh from any computer taht has access
+// rosserial_python node on commander has joystick control... fyi ;)
+
+        rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+
+
+// start xbox360 kinect driver
+
+        roslaunch openni_launch openni.launch
+
+
+// start webcam node
+
+        rosrun usb_cam usb_cam_node

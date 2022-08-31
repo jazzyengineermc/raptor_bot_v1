@@ -1,0 +1,3 @@
+<launch>
+    <node name="viewportal" pkg="rviz" type="rviz" args="$(find raptor_bot_v1)/jazzy.rviz"/>
+</launch>

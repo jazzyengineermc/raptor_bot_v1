@@ -1,0 +1,3 @@
+<launch>
+    <node name="kinect360" pkg="openni_launch" type="openni.launch"/>
+</launch>

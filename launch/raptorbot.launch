@@ -1,0 +1,4 @@
+<launch>
+<!-- <node pkg="rosserial_python" type="serial_node.py" name="mpu6050" args="/dev/ttyUSB1" /> -->
+<node pkg="rosserial_python" type="serial_node.py" name="base" args="/dev/ttyACM0" />
+</launch>

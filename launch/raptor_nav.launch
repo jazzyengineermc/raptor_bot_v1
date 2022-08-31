@@ -1,0 +1,3 @@
+<launch>
+    <node name="navigation" pkg="jackal_navigation" type="move_base.launch"/>
+</launch>

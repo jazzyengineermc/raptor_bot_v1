@@ -1,0 +1,4 @@
+<launch>
+    <node name="freaking_laser" pkg="rplidar_ros" type="rplidarNode"/>
+    <node name="slam" pkg="hector_slam_launch" type="tutorial.launch"/>
+</launch>

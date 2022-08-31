@@ -1,0 +1,9 @@
+<launch>
+
+<node pkg="driver_mpu9250" type="driver_mpu9250_rpi" name="driver_mpu9250">
+
+	<param name="~/interupt_gpio_pin" value="8" />
+
+</node>
+
+</launch>

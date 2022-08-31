@@ -1,0 +1,6 @@
+<launch>
+<arg name="map_fname" value="$(find raptor_bot_v1)/maps/my_map.yaml"/>
+<node pkg="map_server" type="map_server" name="map_server" args="$(arg map_fname)">
+
+</node>
+</launch>
