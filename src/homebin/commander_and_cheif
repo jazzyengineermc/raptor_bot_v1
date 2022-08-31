@@ -1,0 +1,21 @@
+#!/bin/bash
+#
+# Launch commander node
+
+# Get what I need to know
+source /opt/ros/noetic/setup.bash
+source /home/pi/catkin_ws/devel/setup.bash
+
+# roscore master of robot
+# future code: List all robots on network and provide a list to choose from to set this varible
+export ROS_MASTER_URI=http://raptor.local:11311
+
+# start roscore
+#roscore &
+
+# wait for it.... wait for it....
+#sleep 30
+
+# Start commander ros node
+roslaunch /home/pi/catkin_ws/src/raptor_bot_v1/launch/raptor_controller.launch
+#rosrun teleop_twist_keyboard teleop_twist_keyboard.py
